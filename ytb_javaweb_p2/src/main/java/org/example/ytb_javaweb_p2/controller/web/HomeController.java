@@ -1,6 +1,8 @@
 package org.example.ytb_javaweb_p2.controller.web;
 
 import org.example.ytb_javaweb_p2.model.UserModel;
+import org.example.ytb_javaweb_p2.service.ICategoryService;
+import org.example.ytb_javaweb_p2.service.impl.CategoryService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,11 +14,14 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/trang-chu"})
 public class HomeController extends HttpServlet {
+    private ICategoryService categoryService = new CategoryService();
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserModel userModel = new UserModel();
-        userModel.setFullName("Minh Tuan");
-        request.setAttribute("userModel", userModel);
+//        UserModel userModel = new UserModel();
+//        userModel.setFullName("Minh Tuan");
+//        request.setAttribute("userModel", userModel);
+        request.setAttribute("categories", categoryService.findAll());
         RequestDispatcher dispatcher = request.getRequestDispatcher("/views/web/home.jsp");
         dispatcher.forward(request, response);
     }
