@@ -26,6 +26,7 @@ public class LoginServlet extends HttpServlet {
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/admin/home.jsp");
             requestDispatcher.forward(req, resp);
         } else {
+            req.setAttribute("loginError", "Thông tin đăng nhập không chính xác. Vui lòng thử lại.");
             RequestDispatcher requestDispatcher = req.getRequestDispatcher("views/login/login.jsp");
             requestDispatcher.forward(req, resp);
         }

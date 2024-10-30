@@ -15,7 +15,6 @@
 <a href="${pageContext.request.contextPath}/home?action=add-user">Thêm người dùng</a><br>
 <a href="${pageContext.request.contextPath}/home?action=find-user">Tìm kiếm người dùng</a><br>
 <a href="${pageContext.request.contextPath}/home?action=edit-user">Chỉnh sửa thông tin người dùng</a><br>
-<a href="${pageContext.request.contextPath}/home?action=delete-user">Xóa người dùng</a><br>
 <a href="${pageContext.request.contextPath}/home?action=show-all-user">Hiển thị toàn bộ người dùng</a><br>
 <a href="${pageContext.request.contextPath}/home?action=exit">Đăng xuất</a><br>
 </body>

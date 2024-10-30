@@ -18,4 +18,9 @@ public class UserService implements IUserService {
     public void addUser(User user) {
         userDAO.addUser(user);
     }
+
+    @Override
+    public void deleteUserById(int userId) {
+        userDAO.deleteUserById(userId);
+    }
 }

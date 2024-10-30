@@ -17,6 +17,8 @@ import java.util.List;
 public class HomeServlet extends HttpServlet {
     private IUserService userService = new UserService();
     private RequestDispatcher requestDispatcher;
+    private List<User> users;
+    private String id;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String action = req.getParameter("action");
@@ -28,11 +30,19 @@ public class HomeServlet extends HttpServlet {
             case "find-user":
                 break;
             case "edit-user":
+                id = req.getParameter("id");
+
                 break;
             case "delete-user":
+                id = req.getParameter("id");
+                userService.deleteUserById(Integer.parseInt(id));
+                users = userService.getAllUsers();
+                req.setAttribute("users", users);
+                requestDispatcher = req.getRequestDispatcher("views/admin/manage/show-all-user.jsp");
+                requestDispatcher.forward(req, resp);
                 break;
             case "show-all-user":
-                List<User> users = userService.getAllUsers();
+                users = userService.getAllUsers();
                 req.setAttribute("users", users);
                 requestDispatcher = req.getRequestDispatcher("views/admin/manage/show-all-user.jsp");
                 requestDispatcher.forward(req, resp);
@@ -54,6 +64,7 @@ public class HomeServlet extends HttpServlet {
                 String fullName = req.getParameter("fullName");
                 String phoneNumber = req.getParameter("phoneNumber");
                 String email = req.getParameter("email");
+
                 if (users.isEmpty()) {
                     userService.addUser(new User(fullName, phoneNumber, email));
                     requestDispatcher = req.getRequestDispatcher("views/admin/manage/add-success.jsp");
@@ -62,6 +73,7 @@ public class HomeServlet extends HttpServlet {
                 else {
                     for (User user : users) {
                         if (user.getPhoneNumber().equals(phoneNumber) || user.getEmail().equals(email)) {
+                            req.setAttribute("loginError", "Thông tin số điện thoại hoặc email đã ồn tại. Vui lòng thử lại.");
                             requestDispatcher = req.getRequestDispatcher("views/admin/manage/add.jsp");
                             requestDispatcher.forward(req, resp);
                         }

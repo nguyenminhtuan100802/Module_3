@@ -11,19 +11,32 @@
 <html>
 <head>
     <title>Login</title>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+<%--    <script src="https://cdn.tailwindcss.com"></script>--%>
+
+
 </head>
 <body>
-<h2>Login</h2>
+<h2>Xin chào,</h2>
 <form action="${pageContext.request.contextPath}/login" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
+    <label for="username"></label>
+    <input type="text" id="username" name="username" placeholder="Tên tài khoản" required>
     <br><br>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
+    <label for="password"></label>
+    <input type="password" id="password" name="password" placeholder="Mật khẩu" required>
     <br><br>
 
-    <button type="submit">Login</button>
+    <button type="submit">Đăng Nhập</button>
 </form>
+<!-- Hiển thị thông báo lỗi nếu có -->
+<c:if test="${not empty loginError}">
+    <p class="error">${loginError}</p>
+</c:if>
 </body>
 </html>
