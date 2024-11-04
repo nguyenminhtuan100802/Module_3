@@ -79,6 +79,11 @@ public class UserDAO implements IUserDAO {
         }
     }
 
+    @Override
+    public User getUserById(int userId) {
+        return null;
+    }
+
 //    @Override
 //    public User getUserById(int userId) {
 //        User user = new User();

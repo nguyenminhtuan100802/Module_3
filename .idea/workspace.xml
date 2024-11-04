@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a59fc1bc-a874-47fe-b75b-50cc46033194" name="Changes" comment="" />
+    <list default="true" id="a59fc1bc-a874-47fe-b75b-50cc46033194" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankManagement/src/main/java/org/example/bankmanagement/model/dao/impl/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BankManagement/src/main/java/org/example/bankmanagement/model/dao/impl/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement_JDBC/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement_JDBC/.idea/gradle.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,6 +17,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nguyenminhtuan100802"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nguyenminhtuan100802/Module_3.git",
+    "accountId": "f050eb86-ffab-49c7-934b-938dd6530ad0"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -24,6 +43,10 @@
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "E:/Github Frontend/Module_3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -46,6 +69,7 @@
       <updated>1729744382795</updated>
       <workItem from="1729744383815" duration="15000" />
       <workItem from="1729843846057" duration="11000" />
+      <workItem from="1730447688614" duration="656000" />
     </task>
     <servers />
   </component>
